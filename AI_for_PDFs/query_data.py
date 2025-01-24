@@ -2,9 +2,13 @@ import argparse
 from langchain_chroma import Chroma
 from langchain.prompts import ChatPromptTemplate
 from langchain_community.llms.ollama import Ollama
+from langchain_openai import ChatOpenAI
 from embedding_function import get_embedding_function
+import os
+from dotenv import load_dotenv
 
 
+load_dotenv()
 CHROMA_PATH = "chroma"
 
 PROMPT_TEMPLATE = """
@@ -40,7 +44,13 @@ def query_rag(query_text: str):
     prompt = prompt_template.format(context=context_text, question=query_text)
     # print(prompt)
 
-    model = Ollama(model="mistral")
+    api_key = os.getenv("OPENAI_API_KEY")
+    # model = Ollama(model="mistral")
+    model = ChatOpenAI(
+        model="gpt-4",
+        temperature=0.7,
+        openai_api_key=api_key
+    )
     response_text = model.invoke(prompt)
 
     sources = [doc.metadata.get("id", None) for doc, _score in results]
