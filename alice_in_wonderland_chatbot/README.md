@@ -104,7 +104,7 @@ This script provides a user-friendly **Graphical User Interface (GUI)** to inter
    ```bash
    python create_database.py
    ```
-5. Run the main script with:
+5. Run the main script:
    ```bash
    python main.py
    ```
