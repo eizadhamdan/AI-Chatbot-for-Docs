@@ -1,3 +1,4 @@
 .idea
 .vscode
 .env
+/AI_for_PDFs/__pycache__
