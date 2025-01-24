@@ -1,7 +1,7 @@
 from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 import openai 
 from dotenv import load_dotenv
@@ -11,7 +11,7 @@ import shutil
 
 load_dotenv()
 # Use "OPENAI_API_KEY" from your .env file.
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 CHROMA_PATH = "chroma"
 DATA_PATH = "data"
