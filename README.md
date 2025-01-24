@@ -92,7 +92,7 @@ This script provides a user-friendly **Graphical User Interface (GUI)** to inter
 1. Clone the repository:
    ```bash
    git clone https://github.com/eizadhamdan/AI-Chatbot-for-Docs.git
-   cd AI-Chatbot-for-Docs
+   cd AI-Chatbot-for-Docs/alice_in_wonderland_chatbot
    ```
 2. Install dependencies:
    ```bash
