@@ -1,5 +1,3 @@
-# AI Chatbot for Docs
-
 # Alice in Wonderland Chatbot: A Retrieval-Augmented Generation (RAG) Approach
 
 This project implements a chatbot capable of answering questions specifically about Lewis Carroll's *Alice in Wonderland*. The chatbot is built using the **Retrieval-Augmented Generation (RAG)** technique, leveraging `langchain`, `openai`, and `Chroma` for intelligent and context-aware responses.
